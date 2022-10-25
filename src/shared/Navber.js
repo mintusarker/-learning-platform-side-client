@@ -26,6 +26,7 @@ const Navber = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
+                        <Link to="/"><Button className='me-2 m-1' variant="outline-light">Home</Button></Link>
                         <Link to="courses"><Button className='me-2 m-1' variant="outline-light">courses</Button></Link>
                         <Link to="faq"><Button className='me-2 m-1' variant="outline-light">FAQ</Button></Link>
                         <Link to="blogs"><Button className='me-2 m-1' variant="outline-light">Blog</Button></Link>
