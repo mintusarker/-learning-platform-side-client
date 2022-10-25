@@ -4,7 +4,8 @@ import { Button, Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaUser } from 'react-icons/fa';
+import { FaUser} from 'react-icons/fa';
+import { HiAcademicCap } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import { AuthConText } from '../Context/UserContext';
 
@@ -21,7 +22,7 @@ const Navber = () => {
     return (
         <Navbar className='mb-5' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Learning point</Navbar.Brand>
+                <Navbar.Brand href="#home" className='text-info me-4'><HiAcademicCap className='w-25 h-25'></HiAcademicCap> Learning point</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -54,12 +55,9 @@ const Navber = () => {
                                     style={{height:'30px'}}
                                     src={user?.photoURL}
                                     ></Image>
-                                    : <FaUser></FaUser>
+                                    : <p className='pt-2'><FaUser></FaUser></p>
                                 }
                             </Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
