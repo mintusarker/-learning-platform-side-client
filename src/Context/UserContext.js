@@ -15,6 +15,10 @@ const UserContext = ({ children }) => {
         return signInWithPopup(auth, provider)
     }
 
+    const githubLogin = (provider) =>{
+        return signInWithPopup(auth, provider)
+    }
+
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
@@ -45,6 +49,7 @@ const UserContext = ({ children }) => {
     const authInfo = {
         user,
         providerLogin,
+        githubLogin,
         createUser,
         SignIn,
         logOut,

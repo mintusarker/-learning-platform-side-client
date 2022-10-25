@@ -41,7 +41,7 @@ const Navber = () => {
                                     :
                                     <>
                                      <Link to="/login"><Button className='me-2 m-1' variant="outline-light">Login</Button></Link>
-                                     <Link to="/register"><Button className='me-2 m-1' variant="outline-light"></Button></Link>
+                                     <Link to="/register"><Button className='me-2 m-1' variant="outline-light">Register</Button></Link>
                                    </>
                             }
                         </>

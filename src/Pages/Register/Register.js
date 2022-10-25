@@ -65,6 +65,7 @@ const Register = () => {
             <Form.Text className="text-danger">
                 {error}
             </Form.Text>
+            <p><small>If you have already registered. Please Login <Link to = '/login'>Login</Link></small></p>
         </Form>
     );
 };
