@@ -38,7 +38,7 @@ const Navber = () => {
                              user?.uid ?
                                     <>
                                         <span>{user?.email}</span>
-                                        <Button onClick={handleLogOut} className="me-2" variant="outline-light">Logout</Button>
+                                        <Button onClick={handleLogOut} className="me-2" style={{width : '80px'}} variant="outline-light">Logout</Button>
                                     </>
                                     :
                                     <>
@@ -51,7 +51,7 @@ const Navber = () => {
                         <Link to="/profile">
                                 {
                                     user?.photoURL ?
-                                    <Image
+                                    <Image className='mt-1'
                                     roundedCircle
                                     style={{height:'30px'}}
                                     src={user?.photoURL}

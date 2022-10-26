@@ -4,6 +4,8 @@ import AskSomeQuestion from "../../Pages/AskSomeQuestion/AskSomeQuestion";
 import Blogs from "../../Pages/Blog/Blogs";
 import Category from "../../Pages/Category/Category";
 import Course from "../../Pages/Coureses/Course";
+import Details from "../../Pages/Details/Details";
+import GetPremiumAccess from "../../Pages/GetPremiumAccess/GetPremiumAccess";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
@@ -38,6 +40,17 @@ export const routes = createBrowserRouter([
             {
                 path: '/questions',
                 element: <AskSomeQuestion></AskSomeQuestion>
+            },
+
+            {
+                path : '/news/:id',
+                element : <Details></Details>,
+                loader : ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+            },
+            {
+                path : '/access/:id',
+                element : <GetPremiumAccess></GetPremiumAccess>,
+                loader : ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
             },
 
             {

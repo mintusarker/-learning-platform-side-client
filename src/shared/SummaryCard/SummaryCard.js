@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +13,7 @@ const SummaryCard = ({ news }) => {
                 <Card.Text>
                     {
                         details.length > 250 ?
-                            <>{details.slice(0, 250) + '...'} <Link to={`/news/${_id}`}>Read More</Link></>
+                            <>{details.slice(0, 250) + '...'} <Link to={`/news/${_id}`}><Button variant="info">Details</Button></Link></>
                             :
                             details
                     }
