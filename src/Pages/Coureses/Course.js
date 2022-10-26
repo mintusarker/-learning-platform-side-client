@@ -2,19 +2,22 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
 import LeftSideNav from '../../shared/LeftSideNav/LeftSideNav';
-import RightSideNav from '../../shared/RightSideNav/RightSideNav';
+import Category from '../Category/Category';
 
 const Course = () => {
     return (
-        <div>
-             <Container>
+        <div className='m'>
+
+            {/* <LeftSideNav></LeftSideNav>
+            <Outlet></Outlet> */}
+            <Container>
                 <Row>
-                    <Col lg="5" className='d-lg-block'>
+                    <Col lg="4" className=''>
                         <LeftSideNav></LeftSideNav>
                     </Col>
 
-                    <Col lg="7">
-                        <RightSideNav></RightSideNav>
+                    <Col lg="8">
+                        {/* <Category></Category> */}
                         <Outlet></Outlet>
                     </Col>
                 </Row>
