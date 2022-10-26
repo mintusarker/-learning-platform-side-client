@@ -1,7 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import LeftSideNav from '../shared/LeftSideNav/LeftSideNav';
-import Navber from '../shared/Navber';
+import Navber from '../shared/Navber/Navber';
+
 
 const Main = () => {
     return (
