@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const SummaryCard = ({ news }) => {
     const { _id, title, details, image_url } = news;
     return (
-        <Card className="w-50 mx-auto mt-3 mb-5">
+        <Card className="w-50 bg-light mx-auto mt-3 mb-2">
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Img variant="top" src={image_url} />

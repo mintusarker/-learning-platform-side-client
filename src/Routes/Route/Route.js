@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
+import AskSomeQuestion from "../../Pages/AskSomeQuestion/AskSomeQuestion";
+import Blogs from "../../Pages/Blog/Blogs";
 import Category from "../../Pages/Category/Category";
 import Course from "../../Pages/Coureses/Course";
 import Home from "../../Pages/Home/Home";
@@ -15,15 +17,9 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader : () => fetch('http://localhost:5000/news')
+                loader: () => fetch('http://localhost:5000/news')
             },
 
-            // {
-            //     path: '/category/:id',
-            //     element: <Category></Category>,
-            //     loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
-            // },
-            
             {
                 path: '/login',
                 element: <Login></Login>
@@ -33,19 +29,37 @@ export const routes = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>
             },
+
+            {
+                path: '/blogs',
+                element: <Blogs></Blogs>
+            },
+
+            {
+                path: '/questions',
+                element: <AskSomeQuestion></AskSomeQuestion>
+            },
+
             {
                 path: '/courses',
                 element: <Course></Course>,
-                children : [
+                children: [
                     {
                         path: '/courses/:id',
                         element: <Category></Category>,
-                        loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
+                        loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
                     },
                 ]
             },
         ]
 
     },
-    
+
+    {
+        path: '*',
+        element: <div className='text-center text-warning mt-5 pt-5'>
+            <h3> Ops!! Page Not found: 4o4</h3> <p>You provide wrong link .</p>
+            </div>
+    }
+
 ])

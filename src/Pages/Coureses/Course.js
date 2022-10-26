@@ -6,18 +6,14 @@ import Category from '../Category/Category';
 
 const Course = () => {
     return (
-        <div className='m'>
-
-            {/* <LeftSideNav></LeftSideNav>
-            <Outlet></Outlet> */}
+        <div className='m-2'>
             <Container>
                 <Row>
-                    <Col lg="4" className=''>
+                    <Col lg="4" className='ps-5'>
                         <LeftSideNav></LeftSideNav>
                     </Col>
 
                     <Col lg="8">
-                        {/* <Category></Category> */}
                         <Outlet></Outlet>
                     </Col>
                 </Row>
