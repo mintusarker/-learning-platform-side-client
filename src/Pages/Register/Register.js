@@ -53,13 +53,7 @@ const Register = () => {
                 <Form.Control name='password' type="password" placeholder="Password" required />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check
-                    type="checkbox"
-                    label={<>Accepts <Link to="/terms">Terms and Conditions</Link></>} />
-            </Form.Group>
-
-            <Button variant="primary" type="submit">
+            <Button className='mt-3' variant="primary" type="submit">
                 Register
             </Button>
             <Form.Text className="text-danger">

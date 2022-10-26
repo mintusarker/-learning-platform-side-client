@@ -9,6 +9,7 @@ import GetPremiumAccess from "../../Pages/GetPremiumAccess/GetPremiumAccess";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -49,7 +50,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path : '/access/:id',
-                element : <GetPremiumAccess></GetPremiumAccess>,
+                element : <PrivateRoute><GetPremiumAccess></GetPremiumAccess></PrivateRoute>,
                 loader : ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
             },
 

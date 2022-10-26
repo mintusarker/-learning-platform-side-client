@@ -8,15 +8,18 @@ import { useContext } from 'react';
 import { AuthConText } from '../../Context/UserContext';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
-    const [error, setError] = useState('')
-    const { providerLogin, SignIn, githubLogin } = useContext(AuthConText)
+    const [error, setError] = useState('');
+    const { providerLogin, SignIn, githubLogin, setLoading } = useContext(AuthConText);
     const githubProvider = new GithubAuthProvider();
     const googleProvider = new GoogleAuthProvider();
-
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -29,11 +32,17 @@ const Login = () => {
                 const user = result.user
                 console.log(user)
                 form.reset();
+               if(user){
+                navigate(from, {replace : true});
+               }
                 setError('');
             })
             .catch(error => {
                 console.error(error);
                 setError(error.message);
+            })
+            .finally(() =>{
+                setLoading(false)
             })
     }
 
