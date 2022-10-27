@@ -44,12 +44,12 @@ const Navber = () => {
                                 user?.uid ?
                                     <>
                                         <span>{user?.email}</span>
-                                        <Button onClick={handleLogOut} className="me-2" style={{ width: '80px' }} variant="outline-light">Logout</Button>
+                                        <Button onClick={handleLogOut} className="me-2 mt-2" style={{ width: '80px',height:'40px' }} variant="outline-light">Logout</Button>
                                     </>
                                     :
                                     <>
-                                        <Link to="/login"><Button className='me-2 m-1' variant="outline-light">Login</Button></Link>
-                                        <Link to="/register"><Button className='me-2 m-1' variant="outline-light">Register</Button></Link>
+                                        <Link to="/login"><Button className='me-2 mt-2' variant="outline-light">Login</Button></Link>
+                                        <Link to="/register"><Button className='me-2 mt-2' variant="outline-light">Register</Button></Link>
                                     </>
                             }
                         </>

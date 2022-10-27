@@ -19,9 +19,6 @@ const SummaryCard = ({ news }) => {
                     }
                 </Card.Text>
             </Card.Body>
-            <Card.Footer className="">
-
-            </Card.Footer>
         </Card>
     );
 };
