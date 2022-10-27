@@ -31,7 +31,7 @@ const Navber = () => {
                         <Link to="courses"><Button className='me-2 m-1' variant="outline-light">courses</Button></Link>
                         <Link to="questions"><Button className='me-2 m-1' variant="outline-light">FAQ</Button></Link>
                         <Link to="blogs"><Button className='me-2 m-1' variant="outline-light">Blog</Button></Link>
-                        {/* <Link to="toggle"><Button className='me-2 m-1' variant="outline-light">Toggle theme</Button></Link> */}
+                        
                         <label className='pt-2'>
                             <input type="checkbox"/>
                             <span className='check'></span>
@@ -44,7 +44,7 @@ const Navber = () => {
                                 user?.uid ?
                                     <>
                                         <span>{user?.email}</span>
-                                        <Button onClick={handleLogOut} className="me-2 mt-2" style={{ width: '80px',height:'40px' }} variant="outline-light">Logout</Button>
+                                        <Button onClick={handleLogOut} className="me-2 m-1" style={{ width: '80px',height:'40px' }} variant="outline-light">Logout</Button>
                                     </>
                                     :
                                     <>
@@ -54,19 +54,18 @@ const Navber = () => {
                             }
                         </>
 
-                        {/* <Link to="/profile"> */}
                         <>
                             {
                                 user?.photoURL ?
                                     <Image className='mt-1'
                                         roundedCircle
-                                        style={{ height: '30px' }}
+                                        style={{ height:'40px' , width:'40px' }}
                                         title={user?.displayName}
                                         src={user?.photoURL}
                                     ></Image>
                                     : <p className='pt-2 text-info' ><FaUser style={{height:'30px'}}></FaUser></p>
                             }
-                            </>
+                         </>
 
                         {/* </Link> */}
                     </Nav>
