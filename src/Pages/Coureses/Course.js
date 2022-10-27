@@ -2,11 +2,10 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
 import LeftSideNav from '../../shared/LeftSideNav/LeftSideNav';
-import Category from '../Category/Category';
 
 const Course = () => {
     return (
-        <div className='m-2'>
+        <div className='pt-5 bg-light'>
             <Container>
                 <Row>
                     <Col lg="4" className='ps-5'>

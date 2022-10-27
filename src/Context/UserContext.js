@@ -27,6 +27,9 @@ const UserContext = ({ children }) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
+    const updateUserProfile = (profile) => {
+        return updateUserProfile(auth.currentUser, profile)
+    }
 
     const SignIn = (email, password) => {
         setLoading(true);
@@ -57,6 +60,7 @@ const UserContext = ({ children }) => {
         providerLogin,
         githubLogin,
         createUser,
+        updateUserProfile,
         SignIn,
         logOut,
     }

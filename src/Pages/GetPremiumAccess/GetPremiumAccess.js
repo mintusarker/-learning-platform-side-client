@@ -5,14 +5,17 @@ import { useLoaderData } from 'react-router-dom';
 const GetPremiumAccess = () => {
     const news = useLoaderData();
     return (
-        <div className='text-center text-primary'>
-            <h2>Course name :{news?.title}</h2>
-            <h4>Course Fee : {news?.price}</h4>
-            <Image 
-            roundedCircle
-             src={news?.image_url}
-             style ={{height : '200px', width : '200px'}}
-            ></Image>
+        <div>
+            <div className='text-center'>
+                <h5 className='my-5 text-info'>Welcome to Checkout Page</h5>
+                <h2 className='text-primary'>Course name :{news?.title}</h2>
+                <h4 className=' text-primary'>Course Fee : {news?.price}</h4>
+                <Image
+                    roundedCircle
+                    src={news?.image_url}
+                    style={{ height: '200px', width: '200px' }}
+                ></Image>
+            </div>
         </div>
     );
 };

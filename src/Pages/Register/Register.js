@@ -7,7 +7,7 @@ import { AuthConText } from '../../Context/UserContext';
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { createUser} = useContext(AuthConText)
+    const { createUser, updateUserProfile} = useContext(AuthConText)
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -24,6 +24,7 @@ const Register = () => {
                 console.log(user);
                 setError('');
                 form.reset();
+                handleUpdateUserProfile(name, photoURL);
             })
             .catch(error => {
                 console.error(error);
@@ -31,8 +32,19 @@ const Register = () => {
             });
     }
 
+    const handleUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => console.error(error));
+    }
+
     return (
-        <Form onSubmit={handleSubmit} className="w-50 mx-auto">
+        <Form onSubmit={handleSubmit} className="w-50 pt-5 mx-auto">
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Your Name</Form.Label>
                 <Form.Control name='name' type="text" placeholder="your name" />

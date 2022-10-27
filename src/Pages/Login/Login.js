@@ -68,7 +68,7 @@ const Login = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit} className='w-50 mx-auto'>
+        <Form onSubmit={handleSubmit} className='w-50 my-5 pb-5 mx-auto'>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control name='email' type="email" placeholder="Enter email" required />

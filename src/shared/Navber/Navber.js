@@ -21,7 +21,7 @@ const Navber = () => {
 
     console.log(user)
     return (
-        <Navbar className='mb-5' collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar className='' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="#home" className='text-info me-4'><HiAcademicCap className='w-25 h-25'></HiAcademicCap> Learning point</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -54,17 +54,21 @@ const Navber = () => {
                             }
                         </>
 
-                        <Link to="/profile">
+                        {/* <Link to="/profile"> */}
+                        <>
                             {
                                 user?.photoURL ?
                                     <Image className='mt-1'
                                         roundedCircle
                                         style={{ height: '30px' }}
+                                        title={user?.displayName}
                                         src={user?.photoURL}
                                     ></Image>
-                                    : <p className='pt-2'><FaUser></FaUser></p>
+                                    : <p className='pt-2 text-info' ><FaUser style={{height:'30px'}}></FaUser></p>
                             }
-                        </Link>
+                            </>
+
+                        {/* </Link> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

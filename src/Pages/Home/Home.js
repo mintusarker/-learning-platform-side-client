@@ -5,7 +5,7 @@ import SummaryCard from '../../shared/SummaryCard/SummaryCard';
 const Home = () => {
     const allNews = useLoaderData()
     return (
-        <div>
+        <div className='bg-light pt-5'>
             <h2 className='text-center'>All Courses are Here. Total Course is : {allNews.length}</h2>
              {
                 allNews.map(news => <SummaryCard
