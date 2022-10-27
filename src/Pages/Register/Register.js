@@ -1,14 +1,15 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthConText } from '../../Context/UserContext';
 
 
 const Register = () => {
     const [error, setError] = useState('');
     const { createUser, updateUserProfile} = useContext(AuthConText)
-
+    const navigate = useNavigate();
+    
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
@@ -24,6 +25,7 @@ const Register = () => {
                 console.log(user);
                 setError('');
                 form.reset();
+                navigate('/');
                 handleUpdateUserProfile(name, photoURL);
             })
             .catch(error => {
