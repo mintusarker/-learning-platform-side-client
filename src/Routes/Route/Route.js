@@ -20,7 +20,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/news')
+                loader: () => fetch('https://learning-platform-server-tan.vercel.app/news')
             },
 
             {
@@ -44,14 +44,14 @@ export const routes = createBrowserRouter([
             },
 
             {
-                path : '/news/:id',
-                element : <Details></Details>,
-                loader : ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+                path: '/news/:id',
+                element: <Details></Details>,
+                loader: ({ params }) => fetch(`https://learning-platform-server-tan.vercel.app/news/${params.id}`)
             },
             {
-                path : '/access/:id',
-                element : <PrivateRoute><GetPremiumAccess></GetPremiumAccess></PrivateRoute>,
-                loader : ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
+                path: '/access/:id',
+                element: <PrivateRoute><GetPremiumAccess></GetPremiumAccess></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://learning-platform-server-tan.vercel.app/news/${params.id}`)
             },
 
             {
@@ -61,7 +61,7 @@ export const routes = createBrowserRouter([
                     {
                         path: '/courses/:id',
                         element: <Category></Category>,
-                        loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                        loader: ({ params }) => fetch(`https://learning-platform-server-tan.vercel.app/category/${params.id}`)
                     },
                 ]
             },
@@ -73,7 +73,7 @@ export const routes = createBrowserRouter([
         path: '*',
         element: <div className='text-center text-warning mt-5 pt-5'>
             <h3> Ops!! Page Not found: 4o4</h3> <p>You provide wrong link .</p>
-            </div>
+        </div>
     }
 
 ])
