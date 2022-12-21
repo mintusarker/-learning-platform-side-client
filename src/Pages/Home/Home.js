@@ -22,7 +22,7 @@ const Home = () => {
       </Button>
     }
     return (
-        <div className='bg-light pt-5'>
+        <div className=' pt-5'>
             <h2 className='text-center pb-4'>All Courses are Here. Total Course is : {allNews.length}</h2>
              <div className='container mx-auto row row-cols-2'>
              {
