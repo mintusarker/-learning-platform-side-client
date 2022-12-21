@@ -4,6 +4,7 @@ import SummaryCard from '../../shared/SummaryCard/SummaryCard';
 
 const Category = () => {
     const news = useLoaderData()
+    console.log(news)
     return (
         <div>
            {/* <h2 className='text-center'>All are here : {news?.length}</h2> */}

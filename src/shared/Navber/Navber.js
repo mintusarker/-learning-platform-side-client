@@ -32,10 +32,10 @@ const Navber = () => {
                         <Link to="questions"><Button className='me-2 m-1' variant="outline-light">FAQ</Button></Link>
                         <Link to="blogs"><Button className='me-2 m-1' variant="outline-light">Blog</Button></Link>
                         
-                        <label className='pt-2'>
+                        {/* <label className='pt-2'>
                             <input type="checkbox"/>
                             <span className='check'></span>
-                        </label>
+                        </label> */}
 
                     </Nav>
                     <Nav>
