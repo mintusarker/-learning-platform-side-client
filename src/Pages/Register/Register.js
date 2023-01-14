@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { toast } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthConText } from '../../Context/UserContext';
 
@@ -25,8 +26,10 @@ const Register = () => {
                 console.log(user);
                 setError('');
                 form.reset();
+                toast.success('User registered successfully')
                 navigate('/');
                 handleUpdateUserProfile(name, photoURL);
+                
             })
             .catch(error => {
                 console.error(error);

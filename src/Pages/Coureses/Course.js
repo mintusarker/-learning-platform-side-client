@@ -8,11 +8,11 @@ const Course = () => {
         <div className='pt-5'>
             <Container>
                 <Row>
-                    <Col lg="4" className='ps-5'>
+                    <Col lg="4" className='ps-5' style={{height: '400px'}} >
                         <LeftSideNav></LeftSideNav>
                     </Col>
 
-                    <Col lg="8">
+                    <Col lg="8" className=''>
                         <Outlet></Outlet>
                     </Col>
                 </Row>

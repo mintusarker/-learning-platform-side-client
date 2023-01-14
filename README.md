@@ -2,17 +2,19 @@
  
 * This site is a learning programming website .
 
-* This Project are contain blogs, FAQ.
+* This Project is contain blogs, FAQ.
 
-* This projects are also completed by bootstraps, react bootstrap, react router, react icon, vanilla Css, react etc.
+* This project is also completed by bootstraps, react bootstrap, react router, react icon, vanilla CSS, react etc.
 
-* This project have different pages like login, register, courses, details etc.
+* This project has different pages like login, register, courses, details etc.
 
-* Using three type of login method like email-password based, with Google, with Github.
+* Using three types of login method like email-password based, with Google, with Github.
 
-* This projects responsive for mobile and desktop.
+* This project is responsive for mobile and desktop.
 
 Live website Link : [https://learning-platform-b21f0.web.app/](https://learning-platform-b21f0.web.app/)
+
+
 
 
 

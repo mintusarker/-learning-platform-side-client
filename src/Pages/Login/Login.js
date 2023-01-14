@@ -2,6 +2,7 @@ import React from 'react';
 import { ButtonGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { toast } from 'react-hot-toast';
 
 import Form from 'react-bootstrap/Form';
 import { useContext } from 'react';
@@ -35,6 +36,7 @@ const Login = () => {
                if(user){
                 navigate(from, {replace : true});
                }
+               toast.success('User Login successfully')
                 setError('');
             })
             .catch(error => {
