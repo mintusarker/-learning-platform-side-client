@@ -1,0 +1,12 @@
+.summary {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/banner-bk.jpg') top no-repeat fixed;
+    color: #fff;
+    /* height: 300px; */
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+/* .summary1{
+    position: absolute;
+    transition: ease-in;
+} */

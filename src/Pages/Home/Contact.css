@@ -1,0 +1,14 @@
+.contact-input{
+    outline: none;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.first-part{
+    background: linear-gradient(#f5f2f2, #fff);
+    color: black;
+    /* height: 300px; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+}

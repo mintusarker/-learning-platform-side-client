@@ -5,9 +5,9 @@ import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
-    <div className='bg-light'>
+    <div className=''>
       <RouterProvider router={routes}></RouterProvider>
-      <Toaster></Toaster>
+      <Toaster position='bottom-center'></Toaster>
     </div>
   );
 }
