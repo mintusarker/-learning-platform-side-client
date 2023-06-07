@@ -8,7 +8,7 @@ import { FaUser } from 'react-icons/fa';
 import { HiAcademicCap } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import { AuthConText } from '../../Context/UserContext';
-// import ('./Navber.css')
+import ('./Navber.css')
 
 const Navber = () => {
     const { user, logOut } = useContext(AuthConText)
@@ -21,12 +21,13 @@ const Navber = () => {
 
     console.log(user)
     return (
-        <Navbar className='' collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="" className='text-info me-4'><HiAcademicCap className='w-25 h-25'></HiAcademicCap> Learning point</Navbar.Brand>
+        <Navbar style={{backgroundColor:'rgb(2,4,24)'}} className='' collapseOnSelect expand="lg" bg="" variant="dark">
+            <Container className=''>
+                <Navbar.Brand href="" className='text-info nav1 fs-2'><HiAcademicCap className='fs-1'></HiAcademicCap> Learning point</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
+                   
+                   <Nav className="me-auto">
                         <Link to="/"><Button className='me-2 m-1 text-white' variant="">Home</Button></Link>
                         <Link to="courses"><Button className='me-2 m-1 text-white' variant="">Courses</Button></Link>
                         <Link to="questions"><Button className='me-2 m-1 text-white' variant="">FAQ</Button></Link>

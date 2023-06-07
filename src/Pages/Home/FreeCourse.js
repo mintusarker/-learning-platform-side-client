@@ -12,7 +12,7 @@ const FreeCourse = () => {
                     <div className='d-flex gap-5 py-5'>
                         <input type="text" className="form-input" placeholder="Full Name" />
                         <input type="email" className="form-input" placeholder="E-mail" />
-                        <select className='rounded-2 text-white bg-black'>
+                        <select className='rounded-2 text-white bg-dark bg-opacity-75 p-2 fs-5'>
                             <option value="">Javascript</option>
                             <option value="">HTML</option>
                             <option value="">CSS</option>

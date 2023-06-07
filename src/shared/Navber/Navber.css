@@ -1,4 +1,14 @@
+.nav1{
+    margin-right: 550px ;
+}
 
+@media screen and (max-width: 1400px) {
+    .nav1{
+        margin-right: 0px;
+    }
+}
+
+/* 
 input[ type="checkbox"] {
     -webkit-appearance: none;
     visibility: hidden;
@@ -20,7 +30,7 @@ input[ type="checkbox"] {
 input[type="checkbox"]:checked ~ .check
 {
     background: #fff;
-    /* box-shadow: 0 0 0 1200px black; */
+    box-shadow: 0 0 0 1200px black;
 }
 
 .check::before{
@@ -53,4 +63,4 @@ input[type="checkbox"]:checked ~ .check::before
 input[type="checkbox"]:checked ~ .check::after
 {
     transform: translateX(0px);
-}
+} */
