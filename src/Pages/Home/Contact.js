@@ -11,26 +11,25 @@ const Contact = () => {
     }
     return (
         <div className='py-5 mt-5 first-part'>
-            <div className='text-center'>
-                <p className='fw-bold fs-1'>Contact Us</p>
+            <div className='text-center pb-4'>
+                <p className='fw-bold fs-1 border-bottom d-inline'>Contact Us</p>
                 <p className=''>Submit the form to get in touch with us</p>
             </div>
-            <div className='row align-items-baseline mx-auto w-auto pe-5 p-4'>
+            <div className='row align-items-baseline mx-auto w-auto pe-5 px-5 py-2'>
 
-                <div className=' col-lg-4 col-md-5 w-auto mx-auto'>
+                <div className='col-lg-4 col-md-5 w-auto mx-auto border-start border-2 bg-opacity-1 rounded-2 ps-4 mb-5'>
                     <div className='py-8'>
                         <p className='fs-4 fw-semibold'>Have a question?</p>
                         <span className=''>Email us at mintosarker707@gmail.com</span>
-                        <p className=''>Phone / WhatsApp : +8801911697072</p>
                     </div>
-                    <div>
+                    <div className='pt-5 mt-4 '>
                         <span className='fs-5'>Current Location</span>
                         <p className=''>Dhaka, Bangladesh</p>
                     </div>
                 </div>
 
 
-                <form action="" onSubmit={handleSubmit} className='row w-full mx-auto col-lg-6 col-md-7'>
+                <form action="" onSubmit={handleSubmit} className=' row w-full mx-auto col-lg-6 col-md-7'>
                     <input type="text" name='name' placeholder='Enter your name' className='contact-input p-2 rounded-md' required />
                     <input type="email" name='name' placeholder='Enter your email' className='contact-input p-2 my-3 rounded-md' required />
 
