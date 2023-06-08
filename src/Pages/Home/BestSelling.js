@@ -8,7 +8,7 @@ const BestSelling = () => {
                 <div class="row justify-content-center align-items-center">
                     <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
                         <h4 class="my-4">NEW LEARNERS</h4>
-                        <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">0</span> / MO.</p>
+                        <p class="font-weight-bold">$ <span class="display-1 font-weight-bold">0</span> / MO.</p>
                         <ul class="list-unstyled">
                             <li>Up to 5 Documents</li>
                             <li>Up to 3 Testimonials</li>

@@ -15,9 +15,9 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
-      <WhyBest></WhyBest>
       <CourseSummary></CourseSummary>
       <Explore></Explore>
+      <WhyBest></WhyBest>
       <Testimonial></Testimonial>
       <Summary></Summary>
       <BestSelling></BestSelling>

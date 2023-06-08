@@ -7,7 +7,7 @@ import './Explore.css'
 
 const Explore = () => {
     return (
-        <div className='row my-5 py-5 w-100'>
+        <div className='row my-5 py-4 w-100'>
                       <h4 className='text-center fs-4 mb-5 fw-semibold'>FOUR BASIC THINGS</h4>
             <div className='part1 sec1 col-lg-3 col-md-6 px-5'>
                 <p style={{ fontSize: '50px' }} className='text-center'><AiOutlineRead></AiOutlineRead></p>

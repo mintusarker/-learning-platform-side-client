@@ -1,5 +1,6 @@
 import React from 'react';
 import { toast } from 'react-hot-toast';
+
 import './Contact.css'
 
 const Contact = () => {
@@ -39,6 +40,8 @@ const Contact = () => {
                 </form>
 
             </div>
+
+            
         </div>
 
 

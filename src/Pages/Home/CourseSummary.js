@@ -7,7 +7,7 @@ const CourseSummary = () => {
     const news = useLoaderData()
     console.log(news)
     return (
-        <div className='px-5 w-100 mx-auto'>
+        <div className='px-5 mt-5 pt-4 w-100 mx-auto'>
             <h4 className='text-center mb-4'>POPULAR COURSES TO LEARN</h4>
             <div className='row'>
                 {
