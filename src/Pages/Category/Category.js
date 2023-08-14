@@ -7,16 +7,16 @@ const Category = () => {
     console.log(news)
     return (
         <div>
-           {/* <h2 className='text-center'>All are here : {news?.length}</h2> */}
-           <div>
-            {
-                news?.map(news => <SummaryCard
+            {/* <h2 className='text-center'>All are here : {news?.length}</h2> */}
+            <div>
+                {
+                    news?.map(news => <SummaryCard
 
-                    news = {news}
-                
-                ></SummaryCard>)
-            }
-           </div>
+                        news={news}
+
+                    ></SummaryCard>)
+                }
+            </div>
 
         </div>
     );

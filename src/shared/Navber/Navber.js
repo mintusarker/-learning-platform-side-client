@@ -23,34 +23,27 @@ const Navber = () => {
     return (
         <Navbar style={{backgroundColor:'rgb(2,4,24)'}} className='' collapseOnSelect expand="lg" bg="" variant="dark">
             <Container className=''>
-                <Navbar.Brand href="" className='text-info nav1 fs-2'><HiAcademicCap className='fs-1'></HiAcademicCap> Learning point</Navbar.Brand>
+                <Navbar.Brand href="" className='text-info nav1 fs-2'><HiAcademicCap className='fs-1'></HiAcademicCap>Learning point</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                    
-                   <Nav className="me-auto">
-                        <Link to="/"><Button className='me-2 m-1 text-white' variant="">Home</Button></Link>
-                        <Link to="courses"><Button className='me-2 m-1 text-white' variant="">Courses</Button></Link>
-                        <Link to="questions"><Button className='me-2 m-1 text-white' variant="">FAQ</Button></Link>
-                        <Link to="blogs"><Button className='me-2 m-1 text-white' variant="">Blog</Button></Link>
+                   <Nav className="m-auto align-items-center gap-2 justify-content-center d-flex">
+                        <Link to="/"><Button className=' text-white' variant="">Home</Button></Link>
+                        <Link to="courses"><Button className=' text-white' variant="">Courses</Button></Link>
+                        <Link to="questions"><Button className=' text-white' variant="">FAQ</Button></Link>
+                        <Link to="blogs"><Button className='text-white' variant="">Blog</Button></Link>
                         
-                        {/* <label className='pt-2'>
-                            <input type="checkbox"/>
-                            <span className='check'></span>
-                        </label> */}
-
-                    </Nav>
-                    <Nav>
                         <>
                             {
                                 user?.uid ?
                                     <>
-                                        <span>{user?.email}</span>
-                                        <Button onClick={handleLogOut} className="me-2 m-1 text-white" style={{ width: '80px',height:'40px' }} variant="">Logout</Button>
+                                        {/* <span>{user?.email}</span> */}
+                                       <Link> <Button onClick={handleLogOut} className=" text-white" style={{ width: '80px',height:'40px' }} variant="">Logout</Button></Link>
                                     </>
                                     :
                                     <>
-                                        <Link to="/login"><Button className='me-2 mt-2 text-white' variant="">Login</Button></Link>
-                                        <Link to="/register"><Button className='me-2 mt-2 text-white' variant="">Register</Button></Link>
+                                        <Link to="/login"><Button className=' text-white' variant="">Login</Button></Link>
+                                        <Link to="/register"><Button className=' text-white' variant="">Register</Button></Link>
                                     </>
                             }
                         </>
