@@ -1,21 +1,19 @@
 import React, { useContext, useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import { toast } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthConText } from '../../Context/UserContext';
+import '../Login/Login.css'
 
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { createUser, updateUserProfile} = useContext(AuthConText)
+    const { createUser, updateUserProfile } = useContext(AuthConText)
     const navigate = useNavigate();
-    
+
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
         // console.log(name, photoURL, email, password);
@@ -28,8 +26,8 @@ const Register = () => {
                 form.reset();
                 toast.success('User registered successfully')
                 navigate('/');
-                handleUpdateUserProfile(name, photoURL);
-                
+                handleUpdateUserProfile(name);
+
             })
             .catch(error => {
                 console.error(error);
@@ -37,10 +35,9 @@ const Register = () => {
             });
     }
 
-    const handleUpdateUserProfile = (name, photoURL) => {
+    const handleUpdateUserProfile = (name) => {
         const profile = {
             displayName: name,
-            photoURL: photoURL
         }
 
         updateUserProfile(profile)
@@ -49,35 +46,34 @@ const Register = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit} className="w-50 pt-5 mx-auto">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Your Full Name</Form.Label>
-                <Form.Control name='name' type="text" placeholder="your name" />
-            </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Photo URL</Form.Label>
-                <Form.Control name='photoURL' type="text" placeholder="Photo URL" />
-            </Form.Group>
+        <div className="container-fluid">
+            <form
+                onSubmit={handleSubmit}
+                id='form'
+                className="mx-auto">
+                <h4 className="text-center">Register</h4>
+                <div className="mt-4">
+                    <label for="exampleInputEmail1" className="form-label">User Name</label>
+                    <input name='name' type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
 
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control name='email' type="email" placeholder="Enter email" required />
-            </Form.Group>
+                <div className="my-3">
+                    <label for="exampleInputEmail1" className="form-label">Email</label>
+                    <input name='email' type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                </div>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control name='password' type="password" placeholder="Password" required />
-            </Form.Group>
+                <div>
+                    <label for="exampleInputPassword1" className="form-label">Password</label>
+                    <input name='password' type="password" className="form-control" id="exampleInputPassword1" />
+                </div>
+                <p>{error}</p>
 
-            <Button className='mt-3' variant="primary" type="submit">
-                Register
-            </Button>
-            <Form.Text className="text-danger">
-                {error}
-            </Form.Text>
-            <p><small>If you have already registered. Please Login <Link to = '/login'>Login</Link></small></p>
-        </Form>
+                <button type="submit" id="btn-primary" className="btn mt-3 text-uppercase">Register</button>
+
+                <p className='mt-3'>If you have already registered. Please <Link className='text-white' to='/login'>Login</Link></p>
+            </form>
+        </div>
     );
 };
 

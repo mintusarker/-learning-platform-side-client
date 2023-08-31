@@ -30,9 +30,7 @@ const Navber = () => {
                    <Nav className="m-auto align-items-center gap-2 justify-content-center d-flex">
                         <Link to="/"><Button className=' text-white' variant="">Home</Button></Link>
                         <Link to="courses"><Button className=' text-white' variant="">Courses</Button></Link>
-                        <Link to="questions"><Button className=' text-white' variant="">FAQ</Button></Link>
-                        <Link to="blogs"><Button className='text-white' variant="">Blog</Button></Link>
-                        
+                        <Link to="questions"><Button className=' text-white' variant="">FAQ</Button></Link>                        
                         <>
                             {
                                 user?.uid ?

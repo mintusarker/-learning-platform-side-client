@@ -28,7 +28,7 @@ const Details = () => {
                 <Link className='my-3 mx-3' to={`/access/${_id}`}><Button variant="info">Get Premium Access</Button></Link>
 
                 <Pdf targetRef={ref} filename="code-example.pdf">
-                    {({ toPdf }) => <Button onClick={toPdf} className="my-3 mx-3">Download<FaDownload className='text-warning ms-3'></FaDownload></Button>}
+                    {({ toPdf }) => <Button onClick={toPdf} className="my-3">Download<FaDownload className='text-warning ms-3'></FaDownload></Button>}
                 </Pdf>
             </Card.Body>
         </Card>

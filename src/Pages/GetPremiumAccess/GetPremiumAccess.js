@@ -6,10 +6,12 @@ const GetPremiumAccess = () => {
     const news = useLoaderData();
     return (
         <div>
-            <div className='text-center'>
-                <h5 className='my-5 text-info'>Welcome to Checkout Page</h5>
-                <h2 className='text-primary'>Course name :{news?.title}</h2>
-                <h4 className=' text-primary'>Course Fee : {news?.price}</h4>
+            <div className='text-center d-flex flex-column justify-content-center align-items-center'>
+                <div className='mb-4'>
+                    <h5 className='my-5 text-info'>Welcome to Checkout Page</h5>
+                    <h2 className='text-primary'>Course name :{news?.title}</h2>
+                    <h4 className=' text-primary'>Course Fee : {news?.price}</h4>
+                </div>
                 <Image
                     roundedCircle
                     src={news?.image_url}
